@@ -1,0 +1,46 @@
+@import "../styles/root.scss";
+
+nav {
+  background-color: black;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slogan {
+  color: $font-light;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 70px;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  height: 100%;
+  color: $font-light;
+  font-size: 1.5rem;
+  align-items: center;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.logo-profile {
+  height: 75px;
+}
+
+.logo-basket {
+  height: 75px;
+}
+
+.navbar li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
