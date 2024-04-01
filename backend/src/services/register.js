@@ -15,7 +15,6 @@ const playerSchema = Joi.object({
 const register = async (req, res, next) => {
   const errors = [];
   const { firstname, lastname, password, email } = req.body;
-  console.log(email);
   if (!firstname || !lastname || !password || !email) {
     return res.status(400).json({ error: "Il manque un/ou plusieurs champs" });
   }
@@ -24,7 +23,6 @@ const register = async (req, res, next) => {
     return res.status(422).json({ validationErrors: error.details });
   }
   const existEmail = await tables.users.checkEmail(email);
-  console.log(existEmail);
   if (existEmail.length !== 0) {
     errors.push({ champ: "email", message: "Email déjà utilisé" });
   }
